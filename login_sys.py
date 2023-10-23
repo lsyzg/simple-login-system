@@ -1,5 +1,6 @@
 userp = {}
 counter = 3
+
 num_people = int(input("How many people do you want to enter into the database?: "))
 for i in range(num_people):
     user = input("Enter new username: ")
@@ -7,7 +8,8 @@ for i in range(num_people):
     userp[user] = password
 print("User update complete!")
 
-print("Welcome to the company login page!")
+print("Welcome to the login page!")
+
 for i in range(3):
     nuser = input("Enter username: ")
     counter = counter - 1
@@ -18,6 +20,7 @@ for i in range(3):
         npassword = input("Enter your password: ")
         if npassword == userp.get(nuser):
             print(f"Access granted, welcome {nuser}!")
+            break
         else:
             print(f"Wrong password, {counter} attempts left")
     else:
